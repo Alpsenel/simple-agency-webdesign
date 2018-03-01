@@ -1,0 +1,394 @@
+:root {
+    --white: #fff;
+    --highlight: #16a085;
+    --grey_bg: #bdc3c7;
+    --grey_copy: #b9b7c6;
+    --sunflower: #f1c40f;
+    --cloud: #ecf0f1;
+    --turq: #1abc9c;
+    --midblue: #2c3e50;
+    --emerald: #2ecc71;
+}
+
+/*------------ global styles ------------*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/*
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+*/
+
+.wrapper {
+    
+    width: 1440px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.button {
+    border: none;
+    outline: none;
+    border-radius: 2rem;;
+    padding: .6rem 3.5rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button_highlight {
+    background-color: #4e779e;
+}
+
+.button_secondary {
+    color: var(--midblue);
+    background: rgba(250,250,250,0.5)
+}
+
+.button_small {
+    padding: .3rem .5rem;
+}
+
+.button_large {
+    padding: 1rem 1.2rem;
+    font-size: 1.35rem;
+}
+
+.button_footer {
+    background-color: #fff5e0;
+    color: #4e779e; 
+}
+
+.cf:after,
+.cf:before {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+/*------------ banner styles ------------*/
+#banner {
+    background-image: url(../images/backgorund.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#banner header{
+    padding: 2rem 1rem ;
+}
+.main_logo {
+    position: absolute;
+    top: 0;
+    width: 7%;
+    animation-name: leftRight;
+    animation-duration: 1s;
+    
+}
+#logo {
+    color: var(--grey_b);
+    font-weight: 700;
+    font-size: 1.35rem;
+    float: left;
+    margin: 0;
+}
+#logo span {
+    font-weight: 400;
+}
+
+nav {
+    float: right;
+}
+
+nav a{
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.content {
+    padding: 4rem 0 8rem 0;
+    
+}
+
+.title {
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.sub_title {
+    text-align: center;
+    font-size: 1.35rem;
+    width: 500px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.65;
+}
+
+.button_wrapper {   
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 1.35rem;
+    
+}
+
+.button_wrapper .button {
+    margin: 0 1rem;
+}
+
+/*------------ services styles ------------*/
+
+#services {
+    background: #4e779e;
+    padding: 2rem 0 6.5rem 0;
+    position: relative;
+    
+}
+.service {
+    background-color: white;
+    width: 31%;
+    float: left;
+    margin: -5rem 1% 0 1%;
+    padding: 3rem 2.5%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 2px 57px 0px rgba(4,6,9,0.5);
+    border-radius: .36rem;
+    }
+
+.service h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #4e779e;
+}
+
+.service p {
+    margin: 0 0 2rem 0;
+    font-size: 1.1rem;
+    color: #4e779e;
+}
+.service .button {
+    padding: .5rem 2rem;
+}
+
+.service:after {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    height: 50px;
+    border-left: 2px solid white;
+}
+
+.middle:after {
+    bottom: -105px;
+    height: 105px
+    
+}
+
+#services:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 20%;    
+    border-top: 1px solid white;
+    width: 59.5%;
+    margin-left: -30.1%;
+    
+}
+
+/*------------ work styles ------------*/
+
+#past_work {
+    background-color: #fff5e0;
+    padding: 5rem 0 25rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#past_work h2 {
+    font-size: 2.5rem;
+    margin: 0 0 .75rem 0;
+}
+
+.work_logos img{
+    height: 70px;    
+}
+
+
+#slider_buttons {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+#slider_buttons a {
+    text-decoration: none;
+}
+
+#slider_buttons li{
+    width: 13px;
+    height: 13px;
+    margin: 0 .5rem;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: var(--sunflower);
+    transition: background .4s ease-in-out;
+    
+}
+
+#slider_buttons li:hover{
+   
+    background: red;
+    
+}
+
+#slider_buttons .current{
+   
+    background: red;
+    
+}
+
+
+#slider {
+    list-style: none;
+}
+
+#slider li {
+    width: 600px;
+    height: 375px;
+    overflow: hidden;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+    -moz-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+    box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+    position: absolute;
+    z-index: 3;
+    border-radius: .35rem .35rem 0 0;
+    
+    
+}
+
+#slider li:nth-child(1) {
+    bottom: -37px;
+    left: 0;
+    -webkit-transform: scale(.8,.8);
+    -moz-transform: scale(.8,.8);
+    transform: scale(.8,.8);
+    z-index: 2;
+}
+
+#slider li:nth-child(2) {
+    left: 50%;
+    margin-left: -300px;
+    bottom: -37px;   
+    z-index: 4;
+}
+
+#slider li:nth-child(3) {
+    bottom: -37px;
+    right: 0;
+    -webkit-transform: scale(.8,.8);
+    -moz-transform: scale(.8,.8);
+    transform: scale(.8,.8);
+    z-index: 2;
+    
+}
+
+#slider li img {
+    width: 100%;
+}
+
+
+/*------------ footer styles ------------*/
+
+#contact {
+    background: #4e779e;
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+}
+
+#contact .title {
+    
+    font-size: 2.25rem;
+    margin: 0;   
+    color: #fff5e0;
+}
+
+#contact .sub_title {
+    
+    font-size: 1.35rem;
+    width: 600px;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto 4rem auto;
+    color: #fff5e0;
+       
+}
+
+
+footer {
+    padding: 1rem 0;
+    
+}
+
+.copyright {
+    padding: 1rem 0;
+    float: right;
+    font-weight: 700;
+    
+}
+
+.copyright a{
+    text-decoration: none;
+    color: var(--emerald);
+}
+
+
+
+/*------------ fixed class -----------*/
+
+
+.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+/*
+    animation-name: upDown;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+*/
+    transform: rotate(360deg);
+    transition: 1.4s;
+}
+
+@keyframes upDown {
+    0% {top: 0px;}
+    50% {top: 50px;}
+    100% {top: 0px;}
+}
+
+@keyframes leftRight {
+     0%   {left:10px; top:0px;}
+    25%  {left:60px; top:0px;}
+    50%  {left:60px; top:50px;}
+    75%  {left:10px; top:50px;}
+    100% {left:10px; top:0px;}
+}
+
+
